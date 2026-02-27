@@ -1,0 +1,1 @@
+"""Polymarket HFT bot package."""
