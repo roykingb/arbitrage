@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TZ Arbitrage Scanner</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Tanzania Arbitrage Scanner</h1>
+        <p>Live scraping mode for SportPesa, SportyBet, BetPawa, Betway + fallback mode</p>
+      </header>
+
+      <section class="controls">
+        <label>
+          Bankroll (TZS)
+          <input id="bankroll" type="number" value="100000" min="100" />
+        </label>
+        <label>
+          Min ROI %
+          <input id="minRoi" type="number" value="0.2" min="0" step="0.1" />
+        </label>
+        <label>
+          Data Mode
+          <select id="liveMode">
+            <option value="live">Live scrape + fallback</option>
+            <option value="mock">Mock only</option>
+          </select>
+        </label>
+        <label>
+          Markets (multi-select)
+          <select id="markets" multiple>
+            <option value="match_winner">Match Winner</option>
+            <option value="both_teams_to_score">BTTS</option>
+            <option value="over_under_2_5">Over/Under 2.5</option>
+            <option value="double_chance">Double Chance</option>
+            <option value="totals">Totals</option>
+            <option value="asian_handicap">Asian Handicap</option>
+          </select>
+        </label>
+        <button id="scanBtn">Scan Upcoming Markets</button>
+      </section>
+
+      <section>
+        <h2>Detected Opportunities</h2>
+        <p id="meta"></p>
+        <ul id="warnings"></ul>
+        <div id="results"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
