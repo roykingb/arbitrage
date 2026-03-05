@@ -1,29 +1,16 @@
-# TZ Arbitrage Website
+# app
 
-This is an advanced arbitrage scanning web app focused on Tanzanian-popular bookmakers:
-- SportPesa
-- SportyBet
-- BetPawa
-- Betway
+A new Flutter project.
 
-## What it does
-- Scans all configured markets (`match_winner`, `both_teams_to_score`, `over_under_2_5`).
-- Compares best odds across bookmakers per outcome.
-- Detects arbitrage when total implied probability `< 1`.
-- Computes stake split and projected ROI for a bankroll.
-- Includes market selection, bankroll input, and minimum ROI filtering.
+## Getting Started
 
-## Important real-world note
-The current implementation is fully functional using robust mock adapters so it runs reliably in this environment.
-For live bookmaker data, replace `fetchNormalizedMarkets()` with official/authorized API adapters. Many bookmakers use anti-bot and legal restrictions.
+This project is a starting point for a Flutter application.
 
-## Run
-```bash
-npm start
-```
-Then open `http://localhost:8000`.
+A few resources to get you started if this is your first Flutter project:
 
-## Test
-```bash
-npm test
-```
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
